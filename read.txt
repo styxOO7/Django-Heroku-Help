@@ -1,0 +1,15 @@
+youtube -> https://www.youtube.com/watch?v=PCdIowToz8M
+
+https://stackoverflow.com/questions/31684375/automatically-create-requirements-txt
+
+add -> gunicorn in req manually
+
+make changes for static error in urls.py also.
+
+
+procfile ->
+web: gunicorn blog.wsgi:application --log-file - --log-level debug
+python manage.py collectstatic --noinput
+manage.py migrate
+
+after deployment -> app error -> migrations -> png image
